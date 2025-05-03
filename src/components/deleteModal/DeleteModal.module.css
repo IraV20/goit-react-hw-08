@@ -1,0 +1,51 @@
+.modalContack {
+    background: rgb(126, 5, 150);
+    border-radius: 8px;
+    padding: 30px;
+    width: 500px;
+    margin: auto;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: scale(0.9);
+}
+
+.modalTittle {
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-align: center;
+    color: #1b1b1b;
+}
+
+.modalTittleBtnBox {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.modalBtn {
+    width: 120px;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #f6f1f1;
+}
+.modalBtnConfirm {
+    color: #039a15;
+}
+
+.modalBtnReject {
+    color: #d91507;
+}
+
+.modalBtnConfirm:hover,
+.modalBtnConfirm:focus{
+    border: 1px solid #039a15;
+}
+
+.modalBtnReject:hover,
+.modalBtnReject:focus {
+    border: 1px solid #d91507;
+}
