@@ -6,7 +6,7 @@ export default function HomePage() {
       <title>Welcome</title>
       <div className={css.container}>
         <h1>
-          Task manager welcome page{' '}
+          Contacts book welcome page{' '}
           <span role="img" aria-label="Greeting icon">
             💁‍♀️
           </span>

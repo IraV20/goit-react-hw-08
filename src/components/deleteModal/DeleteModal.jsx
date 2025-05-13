@@ -3,6 +3,9 @@ import css from "./DeleteModal.module.css";
 import clsx from 'clsx';
 
 const customStyles = {
+  overlay: {
+    backgroundColor: 'rgba(0, 0, 0, 0.6)'
+  },
   content: {
     top: '50%',
     left: '50%',

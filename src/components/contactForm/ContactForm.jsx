@@ -2,8 +2,9 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useId } from 'react';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contacts/contactsOps';
+import toast from 'react-hot-toast';
 
+import { addContact } from '../../redux/contacts/contactsOps';
 import css from "./ContactForm.module.css";
 
 
@@ -22,15 +23,31 @@ const ContactSchema = Yup.object().shape({
 
 const ContactForm = () =>{
 
-        const dispatch = useDispatch();
-        const fielId = useId();
+    const dispatch = useDispatch();
+    const fielId = useId();
     
-        const handleSabmit = (values, actions) =>{
+    const handleSabmit = (values, actions) =>{
 
-            dispatch(addContact(values))
+        const addContactPromise = dispatch(addContact(values)).unwrap();
+
+        toast.promise(
+        addContactPromise,
+            {
+                loading: 'Adding contact...',
+                success: 'The contact was successfully created!',
+                error: 'Failed to add contact',
+            }
+            );
+
+        addContactPromise
+        .then(() => {
             actions.resetForm();
-        }
-
+        })
+        .catch((err) => {
+            console.error('Error adding contact:', err);
+        });
+    };
+            
     
     return(
         <Formik initialValues={{
