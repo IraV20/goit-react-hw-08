@@ -1,29 +1,40 @@
-.itemBox{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #3a3a3a;
-  border-radius: 4px;
-  padding: 8px;
+.contactBox {
   min-width: 280px;
+  border-radius: 8px;
 }
 
-.btn{
+.contactDesc {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contactDesc p {
+  margin: 0;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #1976d2;
+}
+
+.btn {
   border-radius: 4px;
   padding: 4px 8px;
   min-width: 72px;
   height: 32px;
-  color: #1b1b1b;
-  border: 1px solid #9a9a9a;
   font-family: inherit;
   font-size: 16px;
-}
-
-.icon{
-  margin-right: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .btn:hover,
-.btn:focus{
-  background-color: #d9d9d9;
+.btn:focus {
+  background-color: #e0e0e0;
 }

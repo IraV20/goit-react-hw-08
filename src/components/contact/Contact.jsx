@@ -14,7 +14,7 @@ import EditIcon from '@mui/icons-material/Edit';
 
 import { deleteContact, updateContact } from '../../redux/contacts/contactsOps';
 import { ContactModal } from '../deleteModal/DeleteModal';
-import { UpdateContactModal } from '../updateContactModal/UpdateContactModal';
+import { UpdateContactModal } from '../updateContactModal/UpdateContactMo';
 
 
 export function Contact({ contact }) {

@@ -4,6 +4,7 @@ import axios from "axios";
 export const register = createAsyncThunk("auth/register", 
     async (newUser, thunkAPI) => {
         try {
+            console.log('Registering user:', newUser);
             const res = await axios.post("/users/signup", newUser);
             // додаємо на будь-який наступний запит заголовок (header:) Avtorization зі значенням Bearer {token}:
             axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.token}`;

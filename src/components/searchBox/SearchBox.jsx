@@ -1,6 +1,7 @@
-import css from "./SearchBox.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import {changeFilter, selectNameFilter} from '../../redux/filters/filtersSlice'
+import { changeFilter, selectNameFilter } from '../../redux/filters/filtersSlice'
+import SearchIcon from '@mui/icons-material/Search';
+import { TextField, InputAdornment } from '@mui/material';
 
 const SearchBox = () =>{
 
@@ -15,8 +16,25 @@ const SearchBox = () =>{
 
     return(
         <div>
-            <p>Find contacts by name or number</p>
-            <input className={css.input}type="text" value={filter} onChange={handleFilterChange}/>
+            <p>Find contacts by name or number:</p>
+            <TextField
+                variant="outlined"
+                margin="dense"
+                size="small"
+                value={filter}
+                onChange={handleFilterChange}
+                slotProps={{
+                input: {
+                    startAdornment: (
+                    <InputAdornment position="start">
+                        <SearchIcon />
+                    </InputAdornment>
+                    ),
+                },
+        }}
+                
+            />
+            {/* <input className={css.input}type="text" value={filter} onChange={handleFilterChange}/> */}
         </div>
     )
 }

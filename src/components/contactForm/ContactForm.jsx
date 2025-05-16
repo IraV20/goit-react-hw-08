@@ -3,6 +3,9 @@ import * as Yup from 'yup';
 import { useId } from 'react';
 import { useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+
 
 import { addContact } from '../../redux/contacts/contactsOps';
 import css from "./ContactForm.module.css";
@@ -68,7 +71,7 @@ const ContactForm = () =>{
                 <ErrorMessage name='number' component='span' className={css.err}/>
                 </div>
                 
-                <button className={css.formBtn} type='submit'>Add Contact</button>
+                <Button variant="contained"className={css.formBtn} type='submit'>Add Contact</Button>
             </Form>
         </Formik>
     )

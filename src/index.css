@@ -43,13 +43,9 @@ img {
 button {
   cursor: pointer;
   font-family: inherit;
-  color: currentColor;
   line-height: 0;
   border-radius: 4px;
   padding: 4px 8px;
-  min-width: 64px;
-  height: 28px;
-  border: 1px solid #9a9a9a;
 
 }
 
