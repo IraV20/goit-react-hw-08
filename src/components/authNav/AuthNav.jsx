@@ -1,15 +1,38 @@
 import { NavLink } from 'react-router-dom';
-import css from './AuthNav.module.css';
+import { Link, Stack } from '@mui/material';
 
 export const AuthNav = () => {
   return (
-    <div>
-      <NavLink className={css.link} to="/register">
+    <Stack direction="row" spacing={2}>
+      <Link
+        component={NavLink}
+        to="/register"
+        sx={{
+          
+          textDecoration: 'none',
+          fontWeight: 700,
+          color: '#2a363b',
+          '&.active': {
+            color: 'primary.main',
+          },
+        }}
+      >
         Register
-      </NavLink>
-      <NavLink className={css.link} to="/login">
+      </Link>
+      <Link
+        component={NavLink}
+        to="/login"
+        sx={{
+          textDecoration: 'none',
+          fontWeight: 700,
+          color: '#2a363b',
+          '&.active': {
+            color: 'primary.main',
+          },
+        }}
+      >
         Log In
-      </NavLink>
-    </div>
+      </Link>
+    </Stack>
   );
 };

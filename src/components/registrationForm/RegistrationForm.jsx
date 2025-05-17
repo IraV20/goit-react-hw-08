@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Button } from "@mui/material";
 
 import css from "./RegistrationForm.module.css";
 import { useDispatch } from "react-redux";
@@ -71,9 +72,9 @@ export const RegisterForm = () => {
           <ErrorMessage name="password" component="span" className={css.err} />
         </div>
 
-        <button className={css.formBtn} type="submit">
+        <Button variant='contained' className={css.formBtn} type="submit" sx={{margin: '0 auto'}}>
           Register
-        </button>
+        </Button>
       </Form>
     </Formik>
     )

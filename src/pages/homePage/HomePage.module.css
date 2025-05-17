@@ -1,5 +1,12 @@
 .container {
+    margin-top: 24px;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    align-items: center;
     gap: 21px;
+}
+
+.container span{
+    color: #1976d2;
 }

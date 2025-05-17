@@ -1,8 +1,10 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useDispatch } from "react-redux";
+import Button from '@mui/material/Button';
+
 
 import css from "./LoginForm.module.css";
-import { useDispatch } from "react-redux";
 import { logIn } from "../../redux/auth/authOperation";
 
 const ContactSchema = Yup.object().shape({
@@ -53,9 +55,9 @@ export const LoginForm = () => {
           <ErrorMessage name="password" component="span" className={css.err} />
         </div>
 
-        <button className={css.formBtn} type="submit">
+        <Button className={css.formBtn} type="submit" variant="contained" sx={{margin: '0 auto'}}>
           Log in
-        </button>
+        </Button>
       </Form>
     </Formik>
     )

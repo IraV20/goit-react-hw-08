@@ -1,6 +1,6 @@
 import Modal from 'react-modal';
 import css from "./DeleteModal.module.css";
-import clsx from 'clsx';
+import Button from '@mui/material/Button';
 
 const customStyles = {
   overlay: {
@@ -27,12 +27,12 @@ export const ContactModal = ({ isOpen, onReject, onConfirm }) => {
         >
         <h2 className={css.modalTittle}>Are you sure?</h2>
         <div className={css.modalTittleBtnBox}>
-            <button onClick={onConfirm} className={clsx(css.modalBtn, css.modalBtnConfirm)}>
+          <Button variant="outlined" color="success" onClick={onConfirm} className={css.modalBtn}>
             Yes
-            </button>
-            <button onClick={onReject} className={clsx(css.modalBtn, css.modalBtnReject)}>
+          </Button>
+          <Button variant="outlined" color="error" onClick={onReject} className={css.modalBtn}>
             No
-            </button>
+          </Button>
         </div></Modal>
     )
 }

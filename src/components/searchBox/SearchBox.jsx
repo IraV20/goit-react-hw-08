@@ -31,10 +31,8 @@ const SearchBox = () =>{
                     </InputAdornment>
                     ),
                 },
-        }}
-                
+                }} 
             />
-            {/* <input className={css.input}type="text" value={filter} onChange={handleFilterChange}/> */}
         </div>
     )
 }

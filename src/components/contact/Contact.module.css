@@ -1,5 +1,6 @@
 .contactBox {
-  min-width: 280px;
+  width: 100%;    /* або інше значення на твій смак */
+  min-width: 260px;
   border-radius: 8px;
 }
 
@@ -14,6 +15,11 @@
 
 .contactDesc p {
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  /* регулюй за потребою */
 }
 
 .icon {

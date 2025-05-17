@@ -15,14 +15,11 @@
 
 .modalBtn {
     width: 120px;
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
     font-size: 16px;
     font-weight: 700;
     background-color: #f6f1f1;
 }
-.modalBtnConfirm {
+/* .modalBtnConfirm {
     color: #039a15;
 }
 
@@ -38,4 +35,4 @@
 .modalBtnReject:hover,
 .modalBtnReject:focus {
     border: 1px solid #d91507;
-}
+} */

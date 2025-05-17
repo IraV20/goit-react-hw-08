@@ -2,6 +2,7 @@ import Modal from 'react-modal';
 import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useId } from 'react';
+import Button from '@mui/material/Button';
 
 import css from "./updateContactModal.module.css";
 
@@ -63,7 +64,7 @@ export const UpdateContactModal = ({ isOpen, handleSave, contact, onClose }) => 
                 <ErrorMessage name='number' component='span' className={css.err}/>
                 </div>
                 
-                <button className={css.formBtn} type='submit'>Save</button>
+                <Button variant="contained" className={css.formBtn} type='submit'>Save</Button>
             </Form>
         </Formik></Modal>
     )

@@ -5,6 +5,8 @@ import ContactList from "../../components/contactList/ContactList"
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 
 import { fetchContacts } from "../../redux/contacts/contactsOps";
 import { selectLoading } from "../../redux/contacts/contactsSelectors";
@@ -38,7 +40,9 @@ export default function ContactsPage() {
         }}reverseOrder={false} />
       <ContactForm/>
       <SearchBox />
-      <div>{isLoading && 'Request in progress...'}</div>
+      <div>{isLoading && <Box sx={{ width: '100%' }}>
+      <LinearProgress />
+    </Box>}</div>
       <ContactList/>
     </div>
   )
