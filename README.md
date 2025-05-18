@@ -1,12 +1,36 @@
-# React + Vite
+# Contact Book App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple contact management application built with React and Redux Toolkit. Users can add, delete, and update contacts using a modal form, with form validation and backend integration.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add, delete, and edit contacts
+- Modal window for editing
+- Form validation with Formik and Yup
+- Backend integration via Axios (mockapi.io)
+- Async state management with createAsyncThunk
+- Error and loading handling
+- Memoized selectors with reselect
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Redux Toolkit
+- Axios
+- Formik & Yup
+- React Modal
+- MUI (Material UI)
+- mockapi.io
+- Vercel (deployment)
+
+## Live Demo
+
+[Open App](https://goit-react-hw-08-mocha-eight.vercel.app/)
+
+## GitHub Repository
+
+[View Code](https://github.com/IraV20/goit-react-hw-08)
+
+## Author
+
+[Iryna V]
